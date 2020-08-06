@@ -43,13 +43,17 @@ body {
 }
 .main-box {
   background-color: slategray;
+  
+
 }
 
 .poke-box {
   border: solid darkslategray 5px;
   border-radius: 15px;
-  background-color: slategray;
-  max-width: 50%;
+  background-color: darkslategray;
+  max-width: 75%;
+  margin: 10px;
+
 }
 
 .big-box {
@@ -58,6 +62,9 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 
 }
 
@@ -67,5 +74,22 @@ body {
   align-items: center;
   font-size: 5em;
   color: darkslategray;
+}
+
+.card {
+  border: solid darkslategray 5px;
+  border-radius: 15px;
+  background-color: slategray;
+  color: darkslategray;
+  font-size: x-large;
+  height: 300px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+  cursor: pointer;
+
 }
 
