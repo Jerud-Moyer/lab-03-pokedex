@@ -49,7 +49,8 @@ body {
   border: solid darkslategray 5px;
   border-radius: 15px;
   background-color: slategray;
-  max-width: 50%;
+  max-width: 75%;
+
 }
 
 .big-box {
@@ -67,5 +68,20 @@ body {
   align-items: center;
   font-size: 5em;
   color: darkslategray;
+}
+
+.card {
+  border: solid darkslategray 5px;
+  border-radius: 15px;
+  background-color: slategray;
+  height: 300px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+
+
 }
 

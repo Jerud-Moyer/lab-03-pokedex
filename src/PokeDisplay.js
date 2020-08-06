@@ -7,7 +7,7 @@ export default class PokeDisplay extends Component {
                 {
                 this.props.isLoading
                     ? <p>LOADING!</p>
-                : this.props.pokeState.map(poke => <p>{poke.pokemon} : {poke.defense} : {<img className='poke-box' src={poke.url_image} alt='farts'/>}</p>)
+                : this.props.pokeState.map(poke => <p className='card'>{poke.pokemon} : {poke.defense} : {<img className='poke-box' src={poke.url_image} alt='farts'/>}</p>)
                 }
                 
             </div>
