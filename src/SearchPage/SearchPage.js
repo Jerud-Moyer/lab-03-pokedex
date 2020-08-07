@@ -26,11 +26,12 @@ export default class SearchPage extends Component {
   
 
   searchValue = (e) => this.setState({search: e.target.value})
+  searchValueB = (e) => this.setState({searchBy: e.target.value})
   render() {
     return (
       <div className='main-box'>
         <Header/>
-        <PokeSearch search={this.searchValue} click={this.handleClick} />
+        <PokeSearch search={this.searchValue} searchBy = {this.searchValueB} click={this.handleClick} />
         <PokeDisplay  pokeState={this.state.pokeState}/>
       </div>
     )
