@@ -20,6 +20,7 @@ export default class DetailPage extends Component {
                     pokemon
                         ? <div className='result-inner'>
                             <p>{pokemon.pokemon}</p>
+                            <p>Type: {pokemon.type_1}</p>
                             <p>Defense: {pokemon.defense}</p>
                             <p>Attack: {pokemon.attack}</p>
                             <img src={pokemon.url_image} alt={pokemon.pokemon} />
