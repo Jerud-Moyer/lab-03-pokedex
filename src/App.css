@@ -70,10 +70,16 @@ body {
 
 .head-box {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   font-size: 5em;
   color: darkslategray;
+}
+
+.nav-link {
+  font-size: x-large;
+  color: darkslategray;
+  margin: 10px;
 }
 
 .card {
@@ -93,3 +99,24 @@ body {
 
 }
 
+.result-outer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.result-inner {
+  display: flex;
+  flex-direction: column;
+  font-size: 2em;
+  padding: 20px;
+  background-color: slategray;
+  color: darkslategray;
+  border: solid 5px slategray;
+  border-radius: 15px;
+}
+
+.Links {
+  color: darkslategray;
+}
