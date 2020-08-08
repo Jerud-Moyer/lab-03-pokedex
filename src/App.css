@@ -44,7 +44,13 @@ body {
 .main-box {
   background-color: slategray;
   
+  
+}
 
+.lower-main-box {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 30% 1fr;
 }
 
 .poke-box {
@@ -57,7 +63,24 @@ body {
 }
 
 .big-box {
-  background-color: slategray;
+  z-index: 1;
+  background-color: darkslategray;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  border-left: solid slategray 5px;
+  margin-left: 15px;
+  overflow: scroll;
+  max-height: 75vh;
+
+}
+
+.outer-box {
+  background-color: darkslategray;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -74,7 +97,15 @@ body {
   align-items: center;
   font-size: 5em;
   color: darkslategray;
+  margin-bottom: 5px;
+
 }
+
+.header-box {
+  position: fixed;
+}
+
+
 
 .nav-link {
   font-size: x-large;
@@ -120,3 +151,22 @@ body {
 .Links {
   color: darkslategray;
 }
+
+.ui {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 100%;
+  height: 100%;
+  background-color: darkslategray;
+  padding: 15px;
+  
+}
+
+.ui-el {
+  margin: 15px;
+  height: 30px;
+  font-size: x-large;
+  border: solid darkslategray 2px;
+}
+

@@ -7,20 +7,61 @@ import '../App.css'
 
 export default class SearchPage extends Component {
   state = {
-    search: null,
+    search: '',
     searchBy: 'pokemon',
     isLoading: false,
-    pokeState: []
+    pokeState: [],
+    currentPage: 1,
+    totalPages: 1
   }
 
-  handleClick = async () => {
-    this.setState({ isLoading: true })
-    const pokeData = await request.get(`https://alchemy-pokedex.herokuapp.com/api/pokedex?perPage=1000&${this.state.searchBy}=${this.state.search}`);
-    this.setState({
+  componentDidMount = async () => {
+    const params = new URLSearchParams(this.props.location.search);
+    const searchBy = params.get('searchBy');
+    const page = params.get('search');
+    const search = params.get('search');
+    
+    if (searchBy && page && search) {
+      await this.setState({
+        searchBy: searchBy,
+        currentPage: page,
+        search: search
+      });
+    }
+    await this.makeRequest()
+  }
+  makeRequest = async () => {
+    this.setState({ isLoading: true });
+    const pokeData = await request.get(`https://alchemy-pokedex.herokuapp.com/api/pokedex?page=${this.state.currentPage}&perPage=20&${this.state.searchBy}=${this.state.search}`);
+    
+    await this.setState({
       pokeState: pokeData.body.results,
-      isLoading: false,
+      totalPages: Math.ceil(pokeData.body.count / 20),
+      isLoading:false,
     })
-    console.log(pokeData)
+
+    const params = new URLSearchParams(this.props.location.search);
+
+     params.set('search', this.state.search);
+     params.set('searchBy', this.state.searchBy);
+     params.set('page', this.state.currentPage);
+
+     this.props.history.push('?' + params.toString())
+     
+  }
+
+ 
+  
+  
+
+  handlePrevClick = async () => {
+    await this.setState({ currentPage: Number(this.state.currentPage) +1 })
+    await this.makeRequest()
+  }
+
+  handleNextClick = async () => {
+    await this.setState({ currentPage: Number(this.state.currentPage) +1 })
+    await this.makeRequest();
   }
   
   
@@ -30,9 +71,13 @@ export default class SearchPage extends Component {
   render() {
     return (
       <div className='main-box'>
-        <Header/>
-        <PokeSearch search={this.searchValue} searchBy = {this.searchValueB} click={this.handleClick} />
-        <PokeDisplay  pokeState={this.state.pokeState}/>
+        
+        <Header className='header-box'/>
+        
+        <div className='lower-main-box' > 
+          <PokeSearch search={this.searchValue} searchBy={this.searchValueB} click={this.makeRequest} />
+          <PokeDisplay  pokeState={this.state.pokeState} clicka={this.handlePrevClick} clickb={this.handleNextClick} />
+        </div>
       </div>
     )
   }
