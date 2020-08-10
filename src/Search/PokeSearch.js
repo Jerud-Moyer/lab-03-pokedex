@@ -15,7 +15,28 @@ export default class PokeSearch extends Component {
                     <option value='defense'>defense</option>
                 </select>
                 <button className='ui-el' onClick={this.props.click}>Get Yer Pokemon Here!</button>
-                
+                <h1>Pokemon types:</h1>
+                <div className='legend'>
+                    bug<br/>
+                    dark<br/>
+                    dragon<br/>
+                    electric<br/>
+                    fairy<br/>
+                    fighting<br/>
+                    fire<br/>
+                    flying<br/>
+                    ghost<br/>
+                    grass<br/>
+                    ground<br/>
+                    ice<br/>
+                    normal<br/>
+                    poison<br/>
+                    psychic<br/>
+                    rock<br/>
+                    steel<br/>
+                    water<br/>
+
+                </div>
             </div>
         );
     }

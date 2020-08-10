@@ -23,7 +23,7 @@ body {
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  min-height: 10vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -96,15 +96,18 @@ body {
 
 .head-box {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
-  font-size: 6em;
+  font-size: 8em;
   color: darkslategray;
   margin-bottom: 5px;
   font-family: 'Sedgwick Ave', cursive;
   text-shadow: darkorange 2px 2px;
+  max-height: 25vh;
 
 }
+
+
 
 .header-box {
   position: fixed;
@@ -112,10 +115,14 @@ body {
 
 
 
+
+
 .nav-link {
   font-size: x-large;
   color: darkslategray;
   margin: 10px;
+  visibility: hidden;
+  
 }
 
 .card {
@@ -132,6 +139,7 @@ body {
   align-items: center;
   margin: 20px;
   cursor: pointer;
+  box-shadow: 5px 5px 10px darkorange;
 
 }
 
@@ -157,6 +165,12 @@ body {
   color: darkslategray;
 }
 
+.Links:hover {
+  transform: scale(1.3);
+  transition: transform .5s;
+
+}
+
 .ui {
   display: flex;
   flex-direction: column;
@@ -173,10 +187,21 @@ body {
   height: 30px;
   font-size: x-large;
   border: solid darkslategray 2px;
+  box-shadow: 5px 5px 10px darkorange;
 }
 
 .spin {
-  animation: App-logo-spin infinite 20s linear;
+  animation: App-logo-spin infinite 2s linear;
   color: slategray;
+}
+
+h1 {
+  color: slategray;
+  text-shadow: 1px 1px darkorange;
+}
+
+.legend {
+  font-size: x-large;
+  color: slategray
 }
 
