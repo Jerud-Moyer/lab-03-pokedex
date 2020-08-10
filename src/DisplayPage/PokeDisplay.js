@@ -14,7 +14,7 @@ export default class PokeDisplay extends Component {
             <div className='big-box'>
                 {
                 this.props.isLoading
-                    ? <p>LOADING!</p>
+                    ? <p className='spin'>LOADING!</p>
                 : this.props.pokeState.map(poke => 
                 <Link className='Links' to={`/detail/${poke.pokemon}`}>
                 <p className='card'>{poke.pokemon} : {poke.defense} : {<img className='poke-box' src={poke.url_image} alt='farts'/>}</p></Link>)

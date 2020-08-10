@@ -1,3 +1,6 @@
+@font-face {  font-family: "pokemon";  src: url('/PokemonSolid.ttf');}
+@font-face {  font-family: "pokemon-outline";  src: url('/PokemonHollow.ttf');}
+
 .App {
   text-align: center;
   background-color: slategray;
@@ -95,9 +98,11 @@ body {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  font-size: 5em;
+  font-size: 6em;
   color: darkslategray;
   margin-bottom: 5px;
+  font-family: 'Sedgwick Ave', cursive;
+  text-shadow: darkorange 2px 2px;
 
 }
 
@@ -168,5 +173,10 @@ body {
   height: 30px;
   font-size: x-large;
   border: solid darkslategray 2px;
+}
+
+.spin {
+  animation: App-logo-spin infinite 20s linear;
+  color: slategray;
 }
 

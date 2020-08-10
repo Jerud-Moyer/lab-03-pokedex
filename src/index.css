@@ -11,3 +11,5 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+@font-face {  font-family: "pokemon-outline";  src: url('/PokemonHollow.ttf');}
+@font-face {  font-family: "pokemon";  src: url('/PokemonSolid.ttf');}
