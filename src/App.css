@@ -167,6 +167,10 @@ body {
   height: 85vh;
 }
 
+.result-image {
+  max-height: 60%;
+}
+
 .result-el {
   display: flex;
   justify-content: flex-start;
