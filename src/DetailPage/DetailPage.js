@@ -23,7 +23,7 @@ export default class DetailPage extends Component {
                             <p className='result-el'>Type: {pokemon.type_1}</p>
                             <p className='result-el'>Defense: {pokemon.defense}</p>
                             <p className='result-el'>Attack: {pokemon.attack}</p>
-                            <img src={pokemon.url_image} alt={pokemon.pokemon} />
+                            <img className='result-image' src={pokemon.url_image} alt={pokemon.pokemon} />
                             <Link className='Links' to={'/'} >Back to Pokedex!</Link>
                         </div>
                             : <h1 className='spin'>loading</h1>
