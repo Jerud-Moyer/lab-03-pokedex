@@ -27,9 +27,6 @@ export default class DetailPage extends Component {
                             <Link className='Links' to={'/'} >Back to Pokedex!</Link>
                         </div>
                             : <h1 className='spin'>loading</h1>
-
-
-
                 }
                 
             </div>
