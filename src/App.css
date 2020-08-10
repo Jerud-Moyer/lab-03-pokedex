@@ -148,19 +148,28 @@ body {
   justify-content: center;
   align-items: center;
   margin-top: 30px;
+  
+  
+  
 }
 
 .result-inner {
   display: flex;
   flex-direction: column;
-  font-size: 2em;
-  padding: 20px;
+  font-size: x-large;
+  padding: 30px;
   background-color: slategray;
   color: darkslategray;
   border: solid 5px slategray;
   border-radius: 15px;
   box-shadow: 10px 10px 15px darkorange;
   text-shadow: 1px 1px 2px darkorange;
+  height: 85vh;
+}
+
+.result-el {
+  display: flex;
+  justify-content: flex-start;
 }
 
 .Links {
