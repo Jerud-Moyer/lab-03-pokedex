@@ -1,3 +1,6 @@
+@font-face {  font-family: "pokemon";  src: url('/PokemonSolid.ttf');}
+@font-face {  font-family: "pokemon-outline";  src: url('/PokemonHollow.ttf');}
+
 .App {
   text-align: center;
   background-color: slategray;
@@ -20,7 +23,7 @@ body {
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  min-height: 10vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -44,7 +47,13 @@ body {
 .main-box {
   background-color: slategray;
   
+  
+}
 
+.lower-main-box {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 30% 1fr;
 }
 
 .poke-box {
@@ -57,7 +66,24 @@ body {
 }
 
 .big-box {
-  background-color: slategray;
+  z-index: 1;
+  background-color: darkslategray;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  border-left: solid slategray 5px;
+  margin-left: 15px;
+  overflow: scroll;
+  max-height: 75vh;
+
+}
+
+.outer-box {
+  background-color: darkslategray;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -70,16 +96,33 @@ body {
 
 .head-box {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
-  font-size: 5em;
+  font-size: 8em;
   color: darkslategray;
+  margin-bottom: 5px;
+  font-family: 'Sedgwick Ave', cursive;
+  text-shadow: darkorange 3px 3px 5px;
+  max-height: 25vh;
+
 }
+
+
+
+.header-box {
+  position: fixed;
+}
+
+
+
+
 
 .nav-link {
   font-size: x-large;
   color: darkslategray;
   margin: 10px;
+  visibility: hidden;
+  
 }
 
 .card {
@@ -96,6 +139,7 @@ body {
   align-items: center;
   margin: 20px;
   cursor: pointer;
+  box-shadow: 5px 5px 10px darkorange;
 
 }
 
@@ -115,8 +159,51 @@ body {
   color: darkslategray;
   border: solid 5px slategray;
   border-radius: 15px;
+  box-shadow: 10px 10px 15px darkorange;
+  text-shadow: 1px 1px 2px darkorange;
 }
 
 .Links {
   color: darkslategray;
 }
+
+.Links:hover {
+  transform: scale(1.3);
+  transition: transform .5s;
+
+}
+
+.ui {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 100%;
+  height: 100%;
+  background-color: darkslategray;
+  padding: 15px;
+  
+}
+
+.ui-el {
+  margin: 15px;
+  height: 30px;
+  font-size: x-large;
+  border: solid darkslategray 2px;
+  box-shadow: 5px 5px 10px darkorange;
+}
+
+.spin {
+  animation: App-logo-spin infinite 2s linear;
+  color: slategray;
+}
+
+h1 {
+  color: slategray;
+  text-shadow: 1px 1px 2px darkorange;
+}
+
+.legend {
+  font-size: x-large;
+  color: slategray
+}
+

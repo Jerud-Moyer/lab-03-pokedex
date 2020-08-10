@@ -4,7 +4,7 @@ export default class Header extends Component {
     render() {
         return (
             <div className='head-box'>
-                <ul>
+                <ul className='headline'>
                     <a className='nav-link' href="/detail">Detail</a>
                 </ul>
                 POKEDEX
